@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Todo app</title>
+  <link rel="stylesheet" href="todo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="header">
+        <div class="today">
+          <span class="date">27</span>
+          <span class="month-year">
+            <span class="month">June</span>
+            <span class="year">2024</span>
+          </span>
+        </div>
+    </div>
+
+    
+    <div class="todo-list">
+      <div class="listItem">
+        <!--<p>
+            Title here<br>
+            <small>27 June 2024</small>
+        </p>
+
+        <span></span> -->
+
+      </div>
+
+
+    </div>
+
+    <div class="btnContainer">
+        
+        <span class="addButton">
+            <i class="fa fa-plus"></i>
+        </span>
+
+        <span class="deleteButton">
+            <i class="fa fa-trash"></i>
+        </span>
+
+        <span class="menuButton">
+            <i class="fa fa-bars"></i>
+            <i class="fa fa-close hide"></i>
+        </span>
+
+    </div>
+
+    
+    <div id="modal">
+        <h4>New todo</h4>
+        <form id="addForm">
+            <input type="text" class="newTitle" id="formTitle"  required>
+            <input type="date" class="newDate" required>
+
+            <p>
+
+              <button type="submit" class="addTodo">+ Add</button>
+              <button type="button" class="cancelTodo">Cancel</button> 
+
+            </p>
+        </form>
+    </div>
+    <div class="cover"></div>
+
+
+</div>
+
+<script src="todo.js"></script>
+</body>
+</html>

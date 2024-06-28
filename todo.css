@@ -1,0 +1,221 @@
+body {
+    background-color: #eee;
+    font-family:"Roboto", sans-serif;
+    color:#111;
+}
+
+.wrapper {
+    width:400px;
+    margin:10px auto;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.header {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    padding:10px;
+    border-bottom: 1px solid #50dd67;
+}
+
+.header > div {
+    text-transform: uppercase;
+}
+
+.today {
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.month-year {
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    color: #888;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.date {
+    font-weight: 900;
+    font-size: 2em;
+    margin-right: 6px;
+
+}
+
+.year {
+    line-height: 16px;
+}
+
+.todo-list {
+    display:block;
+    width: 100%;
+    margin-top: 10px;
+    background: #fff;
+
+}
+
+.listItem {
+    display:grid;
+    grid-template-columns: 9fr 1fr;
+    padding:10px;
+    border-bottom: 1px solid #eee;
+}
+
+.listItem p {
+    font-weight: 500;
+}
+
+.listItem p small {
+    font-weight: lighter;
+}
+
+.listItem span {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    align-self: center;
+}
+
+.listItem.complete {
+    color: #999;
+}
+
+.listItem.complete span {
+    background-color: #50dd67;
+    border-color: #2aba41;
+}
+
+.menuButton {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #03a9f4;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 2em;
+    margin-left:160px;
+    margin-top: -20px;
+    cursor:pointer;
+}
+
+.addButton {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #50dd67;
+    text-align: center;
+    padding-top: 10px;
+    margin-left:180px;
+    cursor:pointer;
+    transition: .3s;
+}
+
+.deleteButton {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #f44336;
+    text-align: center;
+    padding-top: 10px;
+    margin-left:180px;
+    cursor:pointer;
+    transition: .3s;
+}
+
+.deleteButton.move{
+    margin-left: 350px;
+    margin-top: -20px;
+    width: 80px;
+    height: 60px;
+    padding-top: 20px;
+    font-size: 2em;
+}
+
+.addButton.move{
+    margin-left: -20px;
+    width: 80px;
+    height: 60px;
+    font-size: 2em;
+    padding-top: 20px;
+    margin-top: -20px;
+}
+
+.hide{
+    display:none !important;
+}
+
+
+#modal{
+    width: 380px;
+    margin: 10px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    position:absolute;
+    z-index: 100;
+    margin-top: -100px;
+    display: none;
+}
+
+
+#modal input{
+    display: block;
+    width:90%;
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    color: #888888;
+    
+}
+
+#modal h4 {
+    margin-bottom: 20px;
+}
+
+.addTodo {
+    color: #fff;
+    padding: 12px;
+    width: 90px;
+    background-color: #50dd67;
+    border-radius: 5px;
+    border: 1px solid #2aba41;
+}
+
+.cancelTodo {
+    color: #fff;
+    padding: 12px;
+    width: 90px;
+    background-color: #929292;
+    border-radius: 5px;
+    border: 1px solid #3a3a3a;
+    
+}
+
+.cover {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0,0,0, 0.4);
+    position: fixed !important;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#modal.active, .cover.active {
+    display:block;
+}
